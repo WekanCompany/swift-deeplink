@@ -16,9 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         self.title = "Deep Linking"
-        
         NotificationCenter.default.addObserver(self, selector: #selector(notificationReceived(_:)), name: Notification.Name("DEEP_LINK_CLICKED"), object: nil)
     }
     
@@ -26,7 +24,7 @@ class ViewController: UIViewController {
     
     @IBAction func btnAction(_ sender: UIButton) {
         let mailURL = URL(string: "message://")! // default apple mail app
-//        let mailURL = URL(string: "googlegmail://")! //Gmail
+        //"googlegmail://" //Gmail
         //"ms-outlook://"
         //"ymail://"
         //"readdle-spark://"
@@ -52,7 +50,6 @@ class ViewController: UIViewController {
             let arr: [String] = urlString.components(separatedBy: "=")
             var viewController = UIViewController()
             let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
-            
             if arr[0] == "obepower://station?stationid" + "." {
                 //Station Page
                 viewController = (mainStoryboard.instantiateViewController(withIdentifier: "StationViewController") as? StationViewController)!
