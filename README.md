@@ -9,7 +9,7 @@
 
 ### Update your info.plist file ###
 
-* The very first step to add deep linking support for our app will  be to update our info.plist file. You can open it as a source file and paste the following code snipped either at the top of the document(right after the opening <dict> tag) or at the bottom of your document(right before the </dict></plist> tags).
+* The very first step to add deep linking support for our app will  be to update our info.plist file. You can open it as a source file and paste the following code snippet either at the top of the document(right after the opening <dict> tag) or at the bottom of your document(right before the </dict></plist> tags).
 ```
 <key>CFBundleURLTypes</key>
 <array>
@@ -46,7 +46,7 @@ NotificationCenter.default.addObserver(self, selector: #selector(notificationRec
 ```
 ### Notification Observer ###
 
-* You will need to add the below function to your ViewController.swift file.
+* You will need to add the below function to your ViewController.swift file. Write the different actions to be done for the custom urls received.
 
 // MARK: - Notification observer        
 
